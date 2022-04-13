@@ -11,8 +11,8 @@ namespace Models
     public class Usuario : Pessoa
     {
         #region Propriedades
-        [BsonId]
-        [BsonRepresentation(BsonType.ObjectId)]
+        /*[BsonId]
+        [BsonRepresentation(BsonType.ObjectId)]*/
         public string Senha { get; set; }
         public string Login { get; set; }
         public string Setor { get; set; }

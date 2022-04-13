@@ -72,8 +72,6 @@ namespace AndreAirLines2._0Aeroporto.Controllers
 
             return NoContent();
         }
-
-
     }
 }
     

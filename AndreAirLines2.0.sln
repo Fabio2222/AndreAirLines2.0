@@ -3,21 +3,29 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32328.378
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AndreAirLines2.0Aeronave", "AndreAirLinesAPI2.0Usuario\AndreAirLines2.0Aeronave.csproj", "{B91D388C-2446-40CE-B644-8F9511B085B2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AndreAirLines2.0Aeronave", "AndreAirLinesAPI2.0Usuario\AndreAirLines2.0Aeronave.csproj", "{B91D388C-2446-40CE-B644-8F9511B085B2}"
+	ProjectSection(ProjectDependencies) = postProject
+		{1CFB7F00-E0C3-4094-A72D-90DB11980722} = {1CFB7F00-E0C3-4094-A72D-90DB11980722}
+		{EAC8FE68-5D6B-483A-87D6-933F61264B6F} = {EAC8FE68-5D6B-483A-87D6-933F61264B6F}
+		{45114276-6D74-4ECF-8DF4-9F6A75898BEF} = {45114276-6D74-4ECF-8DF4-9F6A75898BEF}
+		{C7D09493-1C7F-4104-B546-BC580207F2E5} = {C7D09493-1C7F-4104-B546-BC580207F2E5}
+		{683D12C2-526C-4FC4-AA23-F2522B84405E} = {683D12C2-526C-4FC4-AA23-F2522B84405E}
+		{1310ABE1-0087-43E0-BD23-593627B04CC0} = {1310ABE1-0087-43E0-BD23-593627B04CC0}
+	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Models", "Models\Models.csproj", "{D861E53B-CC3D-4C5F-8BD8-5CDC04B1A1BE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Models", "Models\Models.csproj", "{D861E53B-CC3D-4C5F-8BD8-5CDC04B1A1BE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AndreAirLines2.0Aeroporto", "AndreAirLines2.0Aeroporto\AndreAirLines2.0Aeroporto.csproj", "{45114276-6D74-4ECF-8DF4-9F6A75898BEF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AndreAirLines2.0Aeroporto", "AndreAirLines2.0Aeroporto\AndreAirLines2.0Aeroporto.csproj", "{45114276-6D74-4ECF-8DF4-9F6A75898BEF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AndreAirLines2.0Usuario", "AndreAirLines2.0Usuario\AndreAirLines2.0Usuario.csproj", "{C7D09493-1C7F-4104-B546-BC580207F2E5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AndreAirLines2.0Usuario", "AndreAirLines2.0Usuario\AndreAirLines2.0Usuario.csproj", "{C7D09493-1C7F-4104-B546-BC580207F2E5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AndreAirLines2.0Voo", "AndreAirLines2.0Voo\AndreAirLines2.0Voo.csproj", "{1310ABE1-0087-43E0-BD23-593627B04CC0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AndreAirLines2.0Voo", "AndreAirLines2.0Voo\AndreAirLines2.0Voo.csproj", "{1310ABE1-0087-43E0-BD23-593627B04CC0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AndreAirLines2.0Passagem", "AndreAirLines2.0Passagem\AndreAirLines2.0Passagem.csproj", "{683D12C2-526C-4FC4-AA23-F2522B84405E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AndreAirLines2.0Passagem", "AndreAirLines2.0Passagem\AndreAirLines2.0Passagem.csproj", "{683D12C2-526C-4FC4-AA23-F2522B84405E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AndreAirLines2.0PrecoBase", "AndreAirLines2.0PrecoBase\AndreAirLines2.0PrecoBase.csproj", "{1CFB7F00-E0C3-4094-A72D-90DB11980722}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AndreAirLines2.0PrecoBase", "AndreAirLines2.0PrecoBase\AndreAirLines2.0PrecoBase.csproj", "{1CFB7F00-E0C3-4094-A72D-90DB11980722}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AndreAirLines2.0Passageiro", "AndreAirLines2.0Passageiro\AndreAirLines2.0Passageiro.csproj", "{EAC8FE68-5D6B-483A-87D6-933F61264B6F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AndreAirLines2.0Passageiro", "AndreAirLines2.0Passageiro\AndreAirLines2.0Passageiro.csproj", "{EAC8FE68-5D6B-483A-87D6-933F61264B6F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

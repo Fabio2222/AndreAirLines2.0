@@ -23,7 +23,5 @@ namespace Models
         public string LoginUser { get; set; }
         #endregion
 
-
-
     }
 }
