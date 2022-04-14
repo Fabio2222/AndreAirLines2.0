@@ -49,6 +49,14 @@ namespace AndreAirLines2._0PrecoBase
                     In = ParameterLocation.Header,
                     Description = "Basic Authorization header using the Bearer scheme."
                 });
+
+                services.Configure<PrecoBaseDatabaseSettings>(
+              Configuration.GetSection(nameof(PrecoBaseDatabaseSettings)));
+
+                services.AddSingleton<IPrecoBaseDatabaseSettings>(sp =>
+                    sp.GetRequiredService<IOptions<PrecoBaseDatabaseSettings>>().Value);
+
+                services.AddSingleton<PrecoBaseService>();
             });
 
             services.AddAuthentication(x =>
@@ -69,13 +77,7 @@ namespace AndreAirLines2._0PrecoBase
                 };
             });
 
-            services.Configure<PrecoBaseDatabaseSettings>(
-               Configuration.GetSection(nameof(PrecoBaseDatabaseSettings)));
-
-            services.AddSingleton<IPrecoBaseDatabaseSettings>(sp =>
-                sp.GetRequiredService<IOptions<PrecoBaseDatabaseSettings>>().Value);
-
-            services.AddSingleton<PrecoBaseService>();
+           
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

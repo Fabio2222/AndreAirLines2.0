@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using AndreAirLinesAPI2._0Aeronave.Utils;
-using AndreAirLinesAPI2._0Usuario.Utils;
 using Models;
 using MongoDB.Driver;
 
@@ -22,21 +21,21 @@ namespace AndreAirLinesAPI2._0Aeronave.Services
             _aeronaves.Find(cliente => true).ToList();
 
         public Aeronave Get(string id) =>
-            _aeronaves.Find<Aeronave>(cliente => cliente.Id == id).FirstOrDefault();
+            _aeronaves.Find<Aeronave>(aeronave => aeronave.Id == id).FirstOrDefault();
 
-        public Aeronave Create(Aeronave cliente)
+        public Aeronave Create(Aeronave aeronave)
         {
-            _aeronaves.InsertOne(cliente);
-            return cliente;
+            _aeronaves.InsertOne(aeronave);
+            return aeronave;
         }
 
-        public void Update(string id, Aeronave clienteIn) =>
-            _aeronaves.ReplaceOne(cliente => cliente.Id == id, clienteIn);
+        public void Update(string id, Aeronave aeronaveIn) =>
+            _aeronaves.ReplaceOne(aeronave => aeronave.Id == id, aeronaveIn);
 
-        public void Remove(Aeronave clienteIn) =>
-            _aeronaves.DeleteOne(cliente => cliente.Id == clienteIn.Id);
+        public void Remove(Aeronave aeronaveIn) =>
+            _aeronaves.DeleteOne(aeronave => aeronave.Id == aeronaveIn.Id);
 
         public void Remove(string id) =>
-            _aeronaves.DeleteOne(cliente => cliente.Id == id);
+            _aeronaves.DeleteOne(aeronave => aeronave.Id == id);
     }
 }

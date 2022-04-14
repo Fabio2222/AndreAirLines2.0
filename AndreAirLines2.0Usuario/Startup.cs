@@ -49,6 +49,14 @@ namespace AndreAirLines2._0Usuario
                     In = ParameterLocation.Header,
                     Description = "Basic Authorization header using the Bearer scheme."
                 });
+
+                services.Configure<UsuarioDatabaseSettings>(
+                Configuration.GetSection(nameof(UsuarioDatabaseSettings)));
+
+                services.AddSingleton<IUsuarioDatabaseSettings>(sp =>
+                    sp.GetRequiredService<IOptions<UsuarioDatabaseSettings>>().Value);
+
+                services.AddSingleton<UsuarioService>();
             });
 
             services.AddAuthentication(x =>
@@ -69,13 +77,7 @@ namespace AndreAirLines2._0Usuario
                 };
             });
 
-            services.Configure<UsuarioDatabaseSettings>(
-                 Configuration.GetSection(nameof(UsuarioDatabaseSettings)));
-
-            services.AddSingleton<IUsuarioDatabaseSettings>(sp =>
-                sp.GetRequiredService<IOptions<UsuarioDatabaseSettings>>().Value);
-
-            services.AddSingleton<UsuarioService>();
+           
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

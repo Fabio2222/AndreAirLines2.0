@@ -22,25 +22,25 @@ namespace AndreAirLinesAPI2._0Aeronave.Controllers
             _aeronaveService.Get();
 
 
-        [HttpGet("{id:length(24)}", Name = "GetCliente")]
+        [HttpGet("{id:length(24)}", Name = "GetAeronave")]
         public ActionResult<Aeronave> Get(string id)
         {
-            var cliente = _aeronaveService.Get(id);
+            var aeronave = _aeronaveService.Get(id);
 
-            if (cliente == null)
+            if (aeronave == null)
             {
                 return NotFound();
             }
 
-            return cliente;
+            return aeronave;
         }
 
         [HttpPost]
-        public ActionResult<Aeronave> Create(Aeronave cliente)
+        public ActionResult<Aeronave> Create(Aeronave aeronave)
         {
-            _aeronaveService.Create(cliente);
+            _aeronaveService.Create(aeronave);
 
-            return CreatedAtRoute("GetCliente", new { id = cliente.Id.ToString() }, cliente);
+            return CreatedAtRoute("GetAeronave", new { id = aeronave.Id.ToString() }, aeronave);
         }
 
         [HttpPut("{id:length(24)}")]

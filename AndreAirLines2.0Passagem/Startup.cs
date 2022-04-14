@@ -49,6 +49,14 @@ namespace AndreAirLines2._0Passagem
                     In = ParameterLocation.Header,
                     Description = "Basic Authorization header using the Bearer scheme."
                 });
+
+                services.Configure<PassagemDataBaseSettings>(
+               Configuration.GetSection(nameof(PassagemDataBaseSettings)));
+
+                services.AddSingleton<IPassagemDatabaseSettings>(sp =>
+                    sp.GetRequiredService<IOptions<PassagemDataBaseSettings>>().Value);
+
+                services.AddSingleton<PassagemService>();
             });
 
             services.AddAuthentication(x =>
@@ -69,13 +77,7 @@ namespace AndreAirLines2._0Passagem
                 };
             });
 
-            services.Configure<PassagemDataBaseSettings>(
-               Configuration.GetSection(nameof(PassagemDataBaseSettings)));
-
-            services.AddSingleton<IPassagemDatabaseSettings>(sp =>
-                sp.GetRequiredService<IOptions<PassagemDataBaseSettings>>().Value);
-
-            services.AddSingleton<PassagemService>();
+            
 
         }
 

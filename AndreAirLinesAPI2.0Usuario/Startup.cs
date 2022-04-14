@@ -5,7 +5,6 @@ using System.Text;
 using System.Threading.Tasks;
 using AndreAirLinesAPI2._0Aeronave.Services;
 using AndreAirLinesAPI2._0Aeronave.Utils;
-using AndreAirLinesAPI2._0Usuario.Utils;
 using JWTAuthentication.Config;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
@@ -51,6 +50,14 @@ namespace AndreAirLinesAPI2._0Usuario
                     In = ParameterLocation.Header,
                     Description = "Basic Authorization header using the Bearer scheme."
                 });
+
+                services.Configure<Utils.AeronaveDatabaseSettings>(
+               Configuration.GetSection(nameof(Utils.AeronaveDatabaseSettings)));
+
+                services.AddSingleton<IAeronaveDatabaseSettings>(sp =>
+                    sp.GetRequiredService<IOptions<Utils.AeronaveDatabaseSettings>>().Value);
+
+                services.AddSingleton<AeronaveService>();
             });
 
             services.AddAuthentication(x =>
@@ -71,21 +78,7 @@ namespace AndreAirLinesAPI2._0Usuario
                 };
             });
 
-        }
-
-
-
-
-
-
-            /*services.Configure<AeronaveDatabaseSettings>(
-                Configuration.GetSection(nameof(AeronaveDatabaseSettings)));
-
-            services.AddSingleton<IAeronaveDatabaseSettings>(sp =>
-                sp.GetRequiredService<IOptions<AeronaveDatabaseSettings>>().Value);
-
-            services.AddSingleton<AeronaveService>();*/
-
+        }        
 
             // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
             public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
