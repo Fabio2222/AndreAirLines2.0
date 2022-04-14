@@ -35,6 +35,17 @@ namespace AndreAirLines2._0Usuario.Controllers
             return usuario;
         }
 
+        [HttpGet("LoginSenha", Name = "GetLogineSenha")]
+        public ActionResult<Usuario> GetLoginSenha(string login, string senha)
+        {
+            var usuario =_usuarioService.GetLoginSenha(login, senha);
+
+            if (usuario == null)
+                return Conflict("O USUÁRIO NÃO FOI ENCONTRADO, VERIFIQUE AS INFORMAÇÕES E TENTE NOVAMENTE");
+
+            return usuario;
+        }
+
         [HttpPost]
         public ActionResult<Usuario> Create(Usuario usuario)
         {

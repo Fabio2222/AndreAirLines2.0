@@ -15,8 +15,8 @@ namespace Models
         [BsonRepresentation(BsonType.ObjectId)]*/
         public string Senha { get; set; }
         public string Login { get; set; }
-        public string Setor { get; set; }
-        public Funcao Funcao { get; set; }
+        public string Role { get; set; } //[authorize(Role = )
+        public string Funcao { get; set; }
         #endregion
 
     }

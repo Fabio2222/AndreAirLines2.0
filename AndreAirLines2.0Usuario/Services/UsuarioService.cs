@@ -23,6 +23,9 @@ namespace AndreAirLines2._0Usuario.Services
         public Usuario Get(string id) =>
             _usuarios.Find<Usuario>(usuario => usuario.Id == id).FirstOrDefault();
 
+        public Usuario GetLoginSenha(string login, string senha) =>
+            _usuarios.Find<Usuario>(usuario => usuario.Login == login && usuario.Senha == senha).FirstOrDefault();
+
         public Usuario Create(Usuario usuario)
         {
             _usuarios.InsertOne(usuario);

@@ -36,6 +36,7 @@ namespace AndreAirLinesAPI2._0Aeronave.Controllers
         }
 
         [HttpPost]
+        []
         public ActionResult<Aeronave> Create(Aeronave cliente)
         {
             _aeronaveService.Create(cliente);
