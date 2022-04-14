@@ -27,9 +27,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AndreAirLines2.0PrecoBase",
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AndreAirLines2.0Passageiro", "AndreAirLines2.0Passageiro\AndreAirLines2.0Passageiro.csproj", "{EAC8FE68-5D6B-483A-87D6-933F61264B6F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JWTAuthentication", "JWTAuthentication\JWTAuthentication.csproj", "{4A29E61B-CE53-4B26-9980-A733BE625A3B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JWTAuthentication", "JWTAuthentication\JWTAuthentication.csproj", "{4A29E61B-CE53-4B26-9980-A733BE625A3B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Service", "Service\Service.csproj", "{19B362EE-7B24-4EFE-94CE-4DFCCEC76B38}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Service", "Service\Service.csproj", "{19B362EE-7B24-4EFE-94CE-4DFCCEC76B38}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AndreAirLines2.0Aeronave.Teste", "AndreAirLines2.0Aeronave.Teste\AndreAirLines2.0Aeronave.Teste.csproj", "{6A986082-4BB8-412D-8385-160DB23F035A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -77,6 +79,10 @@ Global
 		{19B362EE-7B24-4EFE-94CE-4DFCCEC76B38}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{19B362EE-7B24-4EFE-94CE-4DFCCEC76B38}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{19B362EE-7B24-4EFE-94CE-4DFCCEC76B38}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A986082-4BB8-412D-8385-160DB23F035A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A986082-4BB8-412D-8385-160DB23F035A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A986082-4BB8-412D-8385-160DB23F035A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A986082-4BB8-412D-8385-160DB23F035A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
